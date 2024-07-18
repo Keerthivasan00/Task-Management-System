@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export const Login = () => {
   return (
@@ -16,7 +17,7 @@ export const Login = () => {
           <div className="w-full flex justify-center pt-10">
             <div className="w-96 h-3/6 bg-white flex  justify-center rounded-3xl ">
               <form action="" className="p-8">
-                <div className="pb-2 font-Oswald">
+                <div className="pb-2 font-Oswald font-bold">
                   <label htmlFor="" className="text-sm">Email</label>
                 </div>
                 <div>
@@ -26,7 +27,7 @@ export const Login = () => {
                     placeholder="Your Email"
                   />
                 </div>
-                <div className="pb-2 pt-3">
+                <div className="pb-2 pt-3 font-bold">
                   <label htmlFor=""className="text-sm">Password</label>
                 </div>
                 <div>
@@ -37,16 +38,17 @@ export const Login = () => {
                   />
                 </div>
                 <div className="flex justify-center pt-11">
-                  <button className="rounded-xl w-24 h-10 border-2 hover:bg-yellow-500 flex justify-center items-center">
+                  <button className="rounded-xl w-24 h-10 border-2 hover:bg-yellow-200 flex justify-center items-center">
                     Login
                   </button>
                 </div>
                 <div className="pt-12">
                   <p className="text-sm">
                     Don't have an account?
-                    <a href="" className="text-sky-800 pl-3">
-                    Sign up
-                    </a>
+                   <Link to ="/NewLogin">Sign up</Link>
+                   
+                    
+            
                   </p>
                 </div>
               </form>
