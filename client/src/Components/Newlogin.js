@@ -1,7 +1,6 @@
 import React from 'react'
 
-export default function 
-() {
+export const Newlogin =()=>  {
   return (
     <div>
         <div className='bg-gray-100 w-100% h-screen flex justify-center items-center'>
@@ -81,9 +80,7 @@ export default function
         </div>
       </form>
     </div>
-
-
-        </div>
+   </div>
     </div>
   )
 }

@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'edu': ['Edu+AU+VIC+WA+NT+Hand"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
