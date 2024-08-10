@@ -12,9 +12,9 @@ export const Login = () => {
         <div className="lg:w-1/2 h-full">
           <div className="w-full h-1/4 flex flex-col items-center p-5 pt-14">
             <img src="/img/Group 1395.png" alt="" className="w-14 h-14" />
-            <h1 className="text-6xl pt-3 ">Organizo</h1>
+            <h1 className="text-5xl pt-3 ">Organizo</h1>
           </div>
-          <div className="w-full flex justify-center pt-10">
+          <div className="w-full flex justify-center pt-7">
             <div className="w-96 h-3/6 bg-white flex  justify-center rounded-3xl ">
               <form action="" className="p-8">
                 <div className="pb-2 font-Oswald font-bold">
@@ -39,17 +39,14 @@ export const Login = () => {
                   />
                 </div>
                 <div className="flex justify-center pt-11">
-                  <button className="rounded-xl w-72 h-8 border-2 hover:bg-yellow-400 flex justify-center items-center">
+                  <Link to="/Home" className="rounded-xl w-72 h-8 border-2 hover:bg-yellow-400 flex justify-center items-center">
                     Login
-                  </button>
+                  </Link>
                 </div>
                 <div className="pt-12">
                   <p className="text-sm">
                     Don't have an account?
                    <Link to ="/NewLogin" className="pl-2 text-blue-600">Sign up</Link>
-                   
-                    
-            
                   </p>
                 </div>
               </form>

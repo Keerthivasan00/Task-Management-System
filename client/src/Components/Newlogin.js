@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const Newlogin =()=>  {
   return (
@@ -18,7 +19,7 @@ export const Newlogin =()=>  {
         <div className="mb-4">
           <label className=" text-gray-700 text-sm font-bold " htmlFor="firstName">
             First Name
-          </label>
+          </label>  
           <input
             className="border rounded w-full py-2 px-3 text-gray-700 "
             id="firstName"
@@ -71,12 +72,14 @@ export const Newlogin =()=>  {
           />
         </div>
         <div className="flex items-center justify-center  ">
+          <Link to="/">
           <button
-            className="  border-2 hover:bg-yellow-400  py-2 px-4 rounded "
+            className="  border-2 hover:bg-yellow-400  py-2 px-4 rounded-2xl "
             type="button"
           >
             Sign Up
           </button>
+          </Link>
         </div>
       </form>
     </div>
