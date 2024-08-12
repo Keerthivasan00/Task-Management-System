@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 export const Login = () => {
+ 
+      const [Email , setEmail] = useState('');
+      const [Password , setPassword] = useState('');
+      const [error , setError] = useState('');
+
+      const handlesumbit = (e) =>{
+        e.preventDefault();
+       
+        
+          setError('');
+    
+          console.log({Email,Password});
+      
+          setEmail('');
+          setPassword('');
+
+      };
+
+      
+
+   
   return (
     <div className="w-100% h-screen bg-gray-100 flex justify-center items-center">
       {/* <div className="w-5/6 h-5/6 flex "> */}
@@ -18,27 +39,35 @@ export const Login = () => {
             <div className="w-96 h-3/6 bg-white flex  justify-center rounded-3xl ">
               <form action="" className="p-8">
                 <div className="pb-2 font-Oswald font-bold">
-                  <label htmlFor="" className="text-sm">Email</label>
+                  <label htmlFor="" className="text-sm">Email<span className="text-red-500">*</span></label>
                 </div>
                 <div>
                   <input
                     type="email"
                     className="bg-slate-200 w-72 pl-3 text-sm rounded-2xl h-8 opacity-2"
                     placeholder="Your Email"
+                    value={Email}     
+                    onChange={(e) =>setEmail(e.target.value)}      
+                    required        
                   />
                 </div>
                 <div className="pb-2 pt-3 font-bold">
-                  <label htmlFor=""className="text-sm">Password</label>
+                  <label htmlFor=""className="text-sm">Password<span className="text-red-500">*</span></label>
                 </div>
                 <div>
                   <input
                     type="password"
                     className="bg-slate-200 w-72 pl-3 text-sm rounded-2xl h-8 opacity-2"
                     placeholder="Your Password"
+                    value={Password}
+                    onChange={(e) =>setPassword(e.target.value)}
+                    required
                   />
-                </div>
+             </div>
+                {error && <p className="text-red-500 mb-4">{error}</p>}
+               
                 <div className="flex justify-center pt-11">
-                  <button className="rounded-xl w-24 h-10 border-2 hover:bg-yellow-200 flex justify-center items-center">
+                  <button onClick={handlesumbit} className="rounded-xl w-24 h-10 border-2 hover:bg-yellow-200 flex justify-center items-center">
                     Login
                   </button>
                 </div>
@@ -46,9 +75,7 @@ export const Login = () => {
                   <p className="text-sm">
                     Don't have an account?
                    <Link to ="/NewLogin">Sign up</Link>
-                   
-                    
-            
+
                   </p>
                 </div>
               </form>
